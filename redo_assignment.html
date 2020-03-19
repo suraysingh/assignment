@@ -1,0 +1,146 @@
+<!DOCTYPE html> 
+<html> 
+  
+<head> 
+    <title>Create a hero image</title> 
+    <link rel="stylesheet" href="script1.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head> 
+<body>
+<div id="header">
+		<h1 >Header</h1>
+</div>
+<div id="content">
+<div class="topnav">
+  <span style="font-size:20px;cursor:pointer" onclick="openNav()">&#9776; navigation bar</span>
+</div>
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">header</a>
+  <a href="#">footer</a>
+  <a href="#">table</a>
+  <a href="#">links</a>
+</div>
+<br>
+<br>
+<div id="left">
+        <h5>Links with hover</h5>
+		<a href="https://www.google.com" target="_blank" >go to google1</a>
+		<br>
+		<br>
+		<h5>list example</h5>
+		<ul style='list-style-type:circle' align=>
+<li>bread</li>
+<li>chia seed</li>
+<li>tea
+    <ol type='A'>
+	  <li>normal tea</li>
+	  <li>green  tea</li>
+	 </ol>
+</li>
+<li>paneer</li>
+</ul>
+		</div>
+		
+<div id="center">
+<p><h5>Form with validation</h5></p>
+<form action="//submit.form" id="EmploymentApption" method="post" onsubmit="return ValidateForm(this);">
+<script>
+function ValidateForm(frm) {
+if (frm.First_Name.value == "") { alert('First name is required.'); frm.First_Name.focus(); return false; }
+if (frm.Last_Name.value == "") { alert('Last name is required.'); frm.Last_Name.focus(); return false; }
+if (frm.Email_Address.value == "") { alert('Email address is required.'); frm.Email_Address.focus(); return false; }
+if (frm.Email_Address.value.indexOf("@") < 1 || frm.Email_Address.value.indexOf(".") < 1) { alert('Please enter a valid email address.'); frm.Email_Address.focus(); return false; }
+if (frm.Position.value == "") { alert('Position is required.'); frm.Position.focus(); return false; }
+if (frm.Phone.value == "") { alert('Phone is required.'); frm.Phone.focus(); return false; }
+return true; }
+</script>
+<table border="0" cellpadding="5" cellspacing="0">
+<tr> <td style="width: 50%">
+<label for="First_Name"><b>First name *</b></label><br />
+<input name="First_Name" type="text" maxlength="50" style="width: 260px" />
+</td> <td style="width: 50%">
+<label for="Last_Name"><b>Last name *</b></label><br />
+<input name="Last_Name" type="text" maxlength="50" style="width: 260px" />
+</td> </tr> <tr> <td colspan="2">
+<label for="Email_Address"><b>Email *</b></label><br />
+<input name="Email_Address" type="text" maxlength="100" style="width: 535px" />
+</td> </tr> <tr> <td colspan="2">
+<label for="Portfolio"><b>Portfolio website</b></label><br />
+<input name="Portfolio" type="text" maxlength="255" value="http://" style="width: 535px" />
+</td> </tr> <tr> <td colspan="2">
+<label for="Position"><b>Position you are applying for *</b></label><br />
+<input name="Position" type="text" maxlength="100" style="width: 535px" />
+</td> </tr> <tr> <td>
+<label for="Salary"><b>Salary requirements</b></label><br /> <input name="Salary" type="text" maxlength="50" style="width: 260px" /> </td> <td>
+<label for="StartDate"><b>When can you start?</b></label><br />
+<input name="StartDate" type="text" maxlength="50" style="width: 260px" />
+</td> </tr> <tr> <td>
+<label for="Phone"><b>Phone *</b></label><br />
+<input name="Phone" type="text" maxlength="50" style="width: 260px" />
+</td> <td>
+<label for="Fax"><b>Fax</b></label><br />
+<input name="Fax" type="text" maxlength="50" style="width: 260px" />
+</td> </tr> <tr> <td colspan="2">
+<label for="Relocate"><b>Are you willing to relocate?</b></label><br />
+<input name="Relocate" type="radio" value="Yes" checked="checked" /> Yes      
+<input name="Relocate" type="radio" value="No" /> No      
+<input name="Relocate" type="radio" value="NotSure" /> Not sure
+</td> </tr> <tr> <td colspan="2">
+<label for="Organization"><b>Last company you worked for</b></label><br />
+<input name="Organization" type="text" maxlength="100" style="width: 535px" />
+</td> </tr> <tr> <td colspan="2">
+<label for="Reference"><b>Reference / Comments / Questions</b></label><br />
+<textarea name="Reference" rows="7" cols="40" style="width: 535px"></textarea>
+</td> </tr> <tr> <td colspan="2" style="text-align: center;">
+<input type="submit" value="Submit">
+</td> </tr>
+</table>
+</form>
+</div>
+ <div id="right">
+  <h5> table formation</h5>
+ <table>
+         <tr>
+		 <th rowspan="5"></th>
+		 <th></th>
+		 <th></th>
+		 </tr>
+		 <tr>
+		 <td rowspan="3"></td>
+		 <td></td>
+		 </tr>
+		 <tr>
+		 <td></td>
+		 </tr>
+		 <tr>
+		 <td></td>
+		 </tr>
+		 <tr>
+		 <td colspan='2'></td>
+		 <tr>
+    
+      </table>
+</div>
+</div>
+<div id="footer">
+		<h1>footer</h1>
+</div>
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("content").style.marginLeft = "250px";
+  document.getElementById("header").style.marginLeft = "250px";
+  document.getElementById("footer").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("content").style.marginLeft= "0";
+  document.getElementById("header").style.marginLeft = "0";
+  document.getElementById("footer").style.marginLeft = "0";
+}
+</script>
+</body>
+</html>
